@@ -1,0 +1,45 @@
+from sklearn import datasets
+import numpy as np
+iris = datasets.load_iris()
+from sklearn.naive_bayes import GaussianNB
+import scipy.io
+epsilon=0.001
+data=scipy.io.loadmat('arr.mat')
+#data_neg=scipy.io.loadmat('arrneg.mat')
+#test=scipy.io.loadmat('test.mat')
+gnb = GaussianNB()
+
+
+dictarray=np.array(data.items()[0][1])
+test_array=np.array(test.items()[0][1])
+dictarray=dictarray+epsilon*(np.ones(np.shape(dictarray),dtype=np.int))
+
+
+'''
+
+
+dict_negarray=np.array(data_neg.items()[1][1])
+
+
+
+
+data_array= np.array([dictarray[0],dictarray[1],dictarray[2],dictarray[3],dictarray[4],dictarray[5],dictarray[6],dictarray[7],dictarray[8],dictarray[9],dictarray[10],dictarray[11],dictarray[12]])[1,:,:]
+
+
+data_negarray= np.array([dict_negarray[0],dict_negarray[1],dict_negarray[2],dict_negarray[3],dict_negarray[4],dict_negarray[5],dict_negarray[6],dict_negarray[7],dict_negarray[8],dict_negarray[9],dict_negarray[10],dict_negarray[11],dict_negarray[12]])[1,:,:]
+
+'''
+
+
+#data_array=data_array+epsilon*np.ones(np.shape(data_array))
+
+Y=np.concatenate((np.ones((104,20),dtype=np.int), np.zeros((104,20), dtype=np.int)), axis=0)[:,1]
+
+#np.concatenate((A,B),axis=0)
+#temp = gnb.fit(np.concatenate((data_array,data_negarray),axis=0),[1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2])
+temp=gnb.fit(dictarray,Y)
+y_pred=temp.predict(test_array)
+#print("Number of mislabeled points out of a total %d points : %d"  % (dictarray.shape[0],(Y!= y_pred).sum()))
+
+#print y_pred
+

@@ -1,0 +1,25 @@
+0  0-25   no hit    
+0  25-50   no hit    
+0  50-75   no hit    
+0  75-100   no hit    
+0  100-125   no hit    
+1  125-150   hit    
+1  150-175   hit    
+1  175-200   hit    
+1  200-225   hit    
+0  225-250   no hit    
+0  250-275   no hit    
+1  275-300   hit    
+1  300-325   hit    
+0  325-350   no hit    
+0  350-375   no hit    
+0  375-400   no hit    
+0  400-425   no hit    
+0  425-450   no hit    
+1  450-475   hit    
+1  475-500   hit    
+0  500-525   no hit    
+0  525-550   no hit    
+0  550-575   no hit    
+1  575-600   hit    
+   

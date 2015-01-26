@@ -1,0 +1,16 @@
+value1=(mean of positive-mean of negative)
+value2=sum(value1.*value1)/20
+score1=absolute(value2-squareroot(mean(variance(positive)))
+score2=absolute(value2-squareroot(mean(variance(negative)))
+
+0.0741-20-increased dataset
+0.0721-30-increase number of clusters
+0.0829-20-increased dataset
+0.0872-20-increased dataset
+0.0897-20-increased dataset
+0.0937-20-increased dataset
+0.0989-20-increased dataset
+
+0.1072-10-reduced number of clusters
+0.1340-5
+0.2093-2
